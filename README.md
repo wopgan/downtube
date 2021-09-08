@@ -2,7 +2,7 @@
 
 Script criado com a simples funcionalidade de facilitar downloads de vídeos do youtube usando Python.
 
-Requisições: pytube
+Requisitos: pytube
 
 para instalar o pytube
 
