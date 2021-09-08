@@ -1,32 +1,20 @@
 from pytube import YouTube
 import os
 
-
-def downTubeVideo(videourl, path):
-
+def downTube(videourl, path):
     yt = YouTube(videourl)
-    yt = yt.streams.filter(progressive=True, file_extension='mp4').order_by('resolution').desc().first()
-    if not os.path.exists(path):
-        os.makedirs(path)
-    yt.download(path)
-    print(yt.title)
+    confirm = input("Deseja baixar apenas o audio? s/n: ") 
+    if confirm == "n" or "N":
+        yt = yt.streams.filter(progressive=True, file_extension='mp4'). order_by('resolution').desc().first()
+    elif conffime == "s" or "S":
+        yt = yt.streams.filter(only_audio=True).first()
 
-
-def downTubeMusic(videourl, path):
-
-    yt = YouTube(videourl)
-    yt = yt.streams.filter(only_audio=True).first()
     if not os.path.exists(path):
         os.makedirs(path)
     yt.download(path)
 
+file = input("Digite o link para download do arquivo: ")
+user = input("Digite o usuário que você está usando: ")
+path = (f"/home/{user}/Downloads/DownTube")
 
-video = input("Digite o link do vídeo desejado: ")
-confirm = input("Deseja baixar só o audio? s/n: ")
-path = input("Digite o caminho para salvar o arquivo: ")
-
-if confirm == "s" or "S":
-    downTubeMusic(video, path)
-
-else:
-    downTubeVideo(video, path)
+downTube(file, path)
