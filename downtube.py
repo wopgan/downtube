@@ -24,8 +24,6 @@ def downTubeMusic(videourl, path):
 home = os.environ['HOME']
 video = input("Digite o link do vídeo desejado: ")
 confirm = input("Deseja baixar só o audio? s/n: ")
-#user = input("Digite o nome do seu usuário: ")
-user = os.getlogin()
 
 
 if confirm == "s":
