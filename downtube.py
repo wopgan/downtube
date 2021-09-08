@@ -21,16 +21,18 @@ def downTubeMusic(videourl, path):
     yt.download(path)
 
 
+home = os.environ['HOME']
 video = input("Digite o link do vídeo desejado: ")
 confirm = input("Deseja baixar só o audio? s/n: ")
-user = input("Digite o nome do seu usuário: ")
+#user = input("Digite o nome do seu usuário: ")
+user = os.getlogin()
 
 
 if confirm == "s":
-    path = (f"/home/{user}/Música/DownTube")
+    path = (f"{home}/Música/DownTube")
     downTubeMusic(video, path)
     print(f"Salvo em {path}")
 elif confirm == "n":
-    path = (f"/home/{user}/Vídeos/DownTube")
+    path = (f"{home}/Vídeos/DownTube")
     downTubeVideo(video, path)
     print(f"Salvo em {path}")
