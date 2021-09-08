@@ -1,4 +1,4 @@
-DownTube
+###DownTube
 
 Script criado com a simples funcionalidade de facilitar downloads de vídeos do youtube usando Python.
 
@@ -6,10 +6,10 @@ Requisições: pytube
 
 para instalar o pytube
 
-$ pip3 install pytube
+```$ pip3 install pytube```
 
 para executar o Downtube
 
-$ python3 donwtube.py
+```$ python3 donwtube.py```
 
 
