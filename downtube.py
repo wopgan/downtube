@@ -23,11 +23,10 @@ def downTubeMusic(videourl, path):
 
 video = input("Digite o link do vídeo desejado: ")
 confirm = input("Deseja baixar só o audio? s/n: ")
+path = input("Digite o caminho para salvar o arquivo: ")
 
 if confirm == "s" or "S":
-    path = "/home/wopgan/Música/DownTube"
     downTubeMusic(video, path)
 
 else:
-    path = "/home/wopgan/Vídeos/DownTube"
     downTubeVideo(video, path)
