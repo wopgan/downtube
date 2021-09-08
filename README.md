@@ -12,4 +12,4 @@ para executar o Downtube
 
 $ python3 donwtube.py
 
-Arquivos serão salvos em no seu diretório Downloads em uma nova pasta criada automaticamente chamada DownTube
+
